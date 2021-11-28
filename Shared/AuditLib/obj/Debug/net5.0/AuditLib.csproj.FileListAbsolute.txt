@@ -1,0 +1,15 @@
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\bin\Debug\net5.0\AuditLib.deps.json
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\bin\Debug\net5.0\AuditLib.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\bin\Debug\net5.0\ref\AuditLib.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\bin\Debug\net5.0\AuditLib.pdb
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\bin\Debug\net5.0\DTO.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\bin\Debug\net5.0\DTO.pdb
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.csproj.AssemblyReference.cache
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.AssemblyInfoInputs.cache
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.AssemblyInfo.cs
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.csproj.CoreCompileInputs.cache
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.csproj.CopyComplete
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\ref\AuditLib.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib\obj\Debug\net5.0\AuditLib.pdb

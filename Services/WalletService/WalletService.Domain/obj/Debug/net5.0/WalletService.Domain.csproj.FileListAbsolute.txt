@@ -1,0 +1,12 @@
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\bin\Debug\net5.0\WalletService.Domain.deps.json
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\bin\Debug\net5.0\WalletService.Domain.dll
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\bin\Debug\net5.0\ref\WalletService.Domain.dll
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\bin\Debug\net5.0\WalletService.Domain.pdb
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\WalletService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\WalletService.Domain.AssemblyInfoInputs.cache
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\WalletService.Domain.AssemblyInfo.cs
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\WalletService.Domain.csproj.CoreCompileInputs.cache
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\WalletService.Domain.dll
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\ref\WalletService.Domain.dll
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\WalletService.Domain.pdb
+C:\VA\iris\source_code\WalletServices\Services\WalletService\WalletService.Domain\obj\Debug\net5.0\WalletService.Domain.csproj.AssemblyReference.cache

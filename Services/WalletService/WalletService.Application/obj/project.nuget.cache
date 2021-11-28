@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "A7RsyZgB+lI00RXSUiJ77y2lfJd0Y6AHAUVuuGg+MH3mmXLliwjBKEPxqeZZ3Lzbgg9R43TMAFqSGs6kjRZsmw==",
+  "success": true,
+  "projectFilePath": "C:\\VA\\iris\\source_code\\WalletServices\\Services\\WalletService\\WalletService.Application\\WalletService.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VanAnh\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\VanAnh\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\VanAnh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\VanAnh\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\VanAnh\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\VanAnh\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\VanAnh\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\AuditLib.Grpc.deps.json
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\AuditLib.Grpc.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\ref\AuditLib.Grpc.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\AuditLib.Grpc.pdb
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\AuditLib.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\DTO.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\AuditLib.pdb
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\bin\Debug\net5.0\DTO.pdb
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.csproj.AssemblyReference.cache
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.GeneratedMSBuildEditorConfig.editorconfig
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.AssemblyInfoInputs.cache
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.AssemblyInfo.cs
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.csproj.CoreCompileInputs.cache
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.csproj.CopyComplete
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\ref\AuditLib.Grpc.dll
+C:\VA\iris\source_code\WalletServices\Shared\AuditLib.Grpc\obj\Debug\net5.0\AuditLib.Grpc.pdb

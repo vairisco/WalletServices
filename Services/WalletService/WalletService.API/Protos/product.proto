@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option csharp_namespace = "WalletAPIService";
+
+package product;
+
+import "Protos/google/api/annotations.proto";
+import "google/protobuf/wrappers.proto";
+
+service Product {
+
+  rpc GetProducts (EmptyMessage) returns (ProductsModel) {
+    option (google.api.http) = {
+      get: "/products"
+    };
+  }
+  
+  rpc CreateProduct (RequestModel) returns (ProductModel) {
+    option (google.api.http) = {
+      post: "/create",
+      body: "*"
+    };
+  }
+
+  rpc UpdateProduct (RequestModel) returns (ProductModel) {
+    option (google.api.http) = {
+      put: "/update",
+      body: "*"
+    };
+  }
+}
+
+message EmptyMessage {
+    
+}
+
+message ProductsModel {
+    repeated ProductModel Products = 1;
+}
+
+message ProductModel {
+    int32 Id = 1;
+    google.protobuf.StringValue Name = 2;
+}
+
+message RequestModel {
+    string Data = 1;
+}

@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4866ae41-2e58-4ea5-8585-2686949c4aac": {
+      "ProjectGuid": "4866ae41-2e58-4ea5-8585-2686949c4aac",
+      "DisplayName": "WalletAPI",
+      "ColorIndex": 0
+    },
+    "b79aa891-3286-4350-a093-7a2bc6893866": {
+      "ProjectGuid": "b79aa891-3286-4350-a093-7a2bc6893866",
+      "DisplayName": "WalletService.API",
+      "ColorIndex": 1
+    },
+    "6013a60b-6c84-4e11-a56d-64c6d1c12dbf": {
+      "ProjectGuid": "6013a60b-6c84-4e11-a56d-64c6d1c12dbf",
+      "DisplayName": "DAL",
+      "ColorIndex": 2
+    },
+    "ed6b79e1-6612-489e-988e-670147f1b5c7": {
+      "ProjectGuid": "ed6b79e1-6612-489e-988e-670147f1b5c7",
+      "DisplayName": "DTO",
+      "ColorIndex": 3
+    },
+    "1103e8a2-ba8d-445f-a58f-596cae34dc6b": {
+      "ProjectGuid": "1103e8a2-ba8d-445f-a58f-596cae34dc6b",
+      "DisplayName": "AuditLib",
+      "ColorIndex": 4
+    },
+    "fec57a65-3cd8-42fe-9c08-81d290b460eb": {
+      "ProjectGuid": "fec57a65-3cd8-42fe-9c08-81d290b460eb",
+      "DisplayName": "AuditLib.Grpc",
+      "ColorIndex": 5
+    },
+    "97c46090-582e-4c6f-8312-7dca359b95c2": {
+      "ProjectGuid": "97c46090-582e-4c6f-8312-7dca359b95c2",
+      "DisplayName": "Domains",
+      "ColorIndex": 6
+    },
+    "10ea8574-49ca-4af2-93a5-b4bb2582547a": {
+      "ProjectGuid": "10ea8574-49ca-4af2-93a5-b4bb2582547a",
+      "DisplayName": "Helper",
+      "ColorIndex": 7
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "a642ac67-800b-4bf4-bce1-b87f7fd0fda2": {
+      "ProjectGuid": "a642ac67-800b-4bf4-bce1-b87f7fd0fda2",
+      "DisplayName": "WalletService.Application",
+      "ColorIndex": 8
+    },
+    "a9cc74b1-af47-4484-b69a-28f4cb30b84d": {
+      "ProjectGuid": "a9cc74b1-af47-4484-b69a-28f4cb30b84d",
+      "DisplayName": "WalletService.Infrastructure",
+      "ColorIndex": 9
+    },
+    "4c93148d-5d9a-41de-b044-c5b90936fde1": {
+      "ProjectGuid": "4c93148d-5d9a-41de-b044-c5b90936fde1",
+      "DisplayName": "WalletService.Domain",
+      "ColorIndex": 10
+    },
+    "50713708-ab06-4da6-9d18-625208c103e3": {
+      "ProjectGuid": "50713708-ab06-4da6-9d18-625208c103e3",
+      "DisplayName": "WalletService.API",
+      "ColorIndex": 11
+    },
+    "49c0607f-a99e-41a7-a920-b0ed387d8a00": {
+      "ProjectGuid": "49c0607f-a99e-41a7-a920-b0ed387d8a00",
+      "DisplayName": "WalletService.API",
+      "ColorIndex": 12
+    }
+  },
+  "NextColorIndex": 13
+}

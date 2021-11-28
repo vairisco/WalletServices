@@ -1,0 +1,12 @@
+C:\VA\iris\source_code\WalletServices\Shared\DTO\bin\Debug\net5.0\DTO.deps.json
+C:\VA\iris\source_code\WalletServices\Shared\DTO\bin\Debug\net5.0\DTO.dll
+C:\VA\iris\source_code\WalletServices\Shared\DTO\bin\Debug\net5.0\ref\DTO.dll
+C:\VA\iris\source_code\WalletServices\Shared\DTO\bin\Debug\net5.0\DTO.pdb
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\DTO.AssemblyInfoInputs.cache
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\DTO.AssemblyInfo.cs
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\DTO.csproj.CoreCompileInputs.cache
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\DTO.dll
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\ref\DTO.dll
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\DTO.pdb
+C:\VA\iris\source_code\WalletServices\Shared\DTO\obj\Debug\net5.0\DTO.csproj.AssemblyReference.cache
