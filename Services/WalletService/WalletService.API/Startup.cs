@@ -1,5 +1,7 @@
-﻿using Helper;
+﻿using HealthChecks.UI.Client;
+using Helper;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -9,8 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using WalletService.API.Extensions;
-using WalletService.API.Handler;
-using WalletService.API.Handler.RSA;
+using WalletService.API.Handler.RSAHandler;
+using WalletService.API.RSAHandler;
 using WalletService.Infrastructure.Persistence;
 
 namespace WalletAPIService
@@ -35,16 +37,13 @@ namespace WalletAPIService
             services.AddScoped<Func<WalletContext>>((provider) => () => provider.GetService<WalletContext>());
             services.AddScoped<DbFactory>();
 
-
             services.AddAutoMapper(typeof(Startup));
+
+            services.AddHealthChecks();
 
             services.AddDIServices();
             services.AddServiceGrpcRegistration(Configuration);
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v2", new OpenApiInfo { Title = "Wallet Service", Version = "v2" });
-            });
 
             services.AddCors(opt =>
             {
@@ -69,7 +68,7 @@ namespace WalletAPIService
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "Pay Service V2");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pay Service V2");
             });
 
             app.UseRouting();
@@ -83,6 +82,11 @@ namespace WalletAPIService
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+                });
+
+                endpoints.MapHealthChecks("/health", new HealthCheckOptions()
+                {
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
                 });
             });
         }

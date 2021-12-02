@@ -15,14 +15,14 @@ service Product {
     };
   }
   
-  rpc CreateProduct (RequestModel) returns (ProductModel) {
+  rpc CreateProduct (RequestModel) returns (ResultModel) {
     option (google.api.http) = {
       post: "/create",
       body: "*"
     };
   }
 
-  rpc UpdateProduct (RequestModel) returns (ProductModel) {
+  rpc UpdateProduct (RequestModel) returns (ResultModel) {
     option (google.api.http) = {
       put: "/update",
       body: "*"
@@ -36,6 +36,8 @@ message EmptyMessage {
 
 message ProductsModel {
     repeated ProductModel Products = 1;
+    bool Error = 2;
+    string Message = 3;
 }
 
 message ProductModel {
@@ -43,6 +45,16 @@ message ProductModel {
     google.protobuf.StringValue Name = 2;
 }
 
+message ResultModel {
+    ProductModel Data = 1;
+    ErrorModel ErrorModel = 2;
+}
+
 message RequestModel {
     string Data = 1;
+}
+
+message ErrorModel {
+    int32 Error = 1;
+    string Message = 2;
 }

@@ -6,9 +6,9 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using WalletService.API.Handler.RSA;
+using WalletService.API.Handler.RSAHandler;
 
-namespace WalletService.API.Handler
+namespace WalletService.API.RSAHandler
 {
     public class RSAHandler : IRSAHandler
     {

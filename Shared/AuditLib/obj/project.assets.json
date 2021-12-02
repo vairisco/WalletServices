@@ -6796,19 +6796,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VanAnh\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\VA\\iris\\source_code\\WalletServices\\Shared\\AuditLib\\AuditLib.csproj",
+      "projectUniqueName": "D:\\IRIS_PRJ\\WalletServices\\Shared\\AuditLib\\AuditLib.csproj",
       "projectName": "AuditLib",
-      "projectPath": "C:\\VA\\iris\\source_code\\WalletServices\\Shared\\AuditLib\\AuditLib.csproj",
-      "packagesPath": "C:\\Users\\VanAnh\\.nuget\\packages\\",
-      "outputPath": "C:\\VA\\iris\\source_code\\WalletServices\\Shared\\AuditLib\\obj\\",
+      "projectPath": "D:\\IRIS_PRJ\\WalletServices\\Shared\\AuditLib\\AuditLib.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\IRIS_PRJ\\WalletServices\\Shared\\AuditLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\VanAnh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6822,8 +6822,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\VA\\iris\\source_code\\WalletServices\\Shared\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\VA\\iris\\source_code\\WalletServices\\Shared\\DTO\\DTO.csproj"
+            "D:\\IRIS_PRJ\\WalletServices\\Shared\\DTO\\DTO.csproj": {
+              "projectPath": "D:\\IRIS_PRJ\\WalletServices\\Shared\\DTO\\DTO.csproj"
             }
           }
         }
@@ -6862,7 +6862,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

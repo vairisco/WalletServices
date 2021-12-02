@@ -4,6 +4,7 @@ using AuditLib.Grpc;
 using DTO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 
 namespace WalletService.API.Extensions
 {
@@ -26,6 +27,11 @@ namespace WalletService.API.Extensions
                 services.AddGrpc();
 
             services.AddGrpcHttpApi();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Wallet Service", Version = "v1" });
+            });
             services.AddGrpcSwagger();
             services.AddHttpContextAccessor();
 

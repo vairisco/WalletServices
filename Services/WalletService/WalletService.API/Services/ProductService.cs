@@ -8,7 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-using WalletService.API.Handler.RSA;
+using WalletService.API.Handler;
+using WalletService.API.Handler.RSAHandler;
 using WalletService.API.Helper;
 using WalletService.API.ViewModels.Product;
 using WalletService.Application.Features.Products.Interface;
@@ -42,34 +43,72 @@ namespace WalletAPIService
                 return new ProductsModel();
             }
         }
-        public override async Task<ProductModel> CreateProduct(RequestModel requestModel, ServerCallContext context)
+        public override async Task<ResultModel> CreateProduct(RequestModel requestModel, ServerCallContext context)
         {
-            //throw new Exception("This is sample exception 2");
-            var requestDecrypt = _rsaHandler.Decrypt(requestModel.Data);
-            var request = DeserializeHelper.DeserializeMethod<ProductCreateRequest>(requestDecrypt);
-
-            using (AuditScope.Create(_ => _
-            .EventType("Product:Create")
-            .Target(() => request)))
+            try
             {
-                var productEntity = _mapper.Map<WalletService.Domain.Entities.Product>(request);
-                var product = await _productService.CreateProduct(productEntity);
-                var productCreatedEntity = product != null ? _mapper.Map<ProductModel>(product) : new ProductModel();
-                return productCreatedEntity;
+                var requestDecrypt = _rsaHandler.Decrypt(requestModel.Data);
+                var request = DeserializeHelper.DeserializeMethod<ProductCreateRequest>(requestDecrypt);
+
+                using (AuditScope.Create(_ => _
+                .EventType("Product:Create")
+                .Target(() => request)))
+                {
+                    var productEntity = _mapper.Map<WalletService.Domain.Entities.Product>(request);
+                    var product = await _productService.CreateProduct(productEntity);
+                    var productCreatedEntity = product != null ? _mapper.Map<ProductModel>(product) : new ProductModel();
+
+                    ErrorModel errorModel = new();
+                    ErrorMessageFormat.SuccessMessageHandler(ref errorModel);
+
+                    var resultModel = new ResultModel();
+                    resultModel.Data = productCreatedEntity;
+                    resultModel.ErrorModel = errorModel;
+
+                    return resultModel;
+                }
+            }
+            catch (Exception ex)
+            {
+                var resultModel = new ResultModel();
+                ProductModel productModel = new ProductModel();
+                ErrorModel errorModel = new();
+                ErrorMessageFormat.FailMessageHandler(ref errorModel);
+                resultModel.ErrorModel = errorModel;
+                resultModel.Data = productModel;
+                return resultModel;
             }
         }
 
-        public override async Task<ProductModel> UpdateProduct(RequestModel requestModel, ServerCallContext context)
-        {
-            var requestDecrypt = _rsaHandler.Decrypt(requestModel.Data);
-            var request = DeserializeHelper.DeserializeMethod<ProductUpdateRequest>(requestDecrypt);
+        //public override async Task<ProductModel> UpdateProduct(RequestModel requestModel, ServerCallContext context)
+        //{
+        //    try
+        //    {
+        //        var requestDecrypt = _rsaHandler.Decrypt(requestModel.Data);
+        //        var request = DeserializeHelper.DeserializeMethod<ProductUpdateRequest>(requestDecrypt);
 
-            using (AuditScope.Create("Product:Update", () => request))
-            {
-                var productEntity = _mapper.Map<WalletService.Domain.Entities.Product>(request);
-                await _productService.UpdateProduct(productEntity);
-                return _mapper.Map<ProductModel>(productEntity);
-            }
-        }
+        //        using (AuditScope.Create("Product:Update", () => request))
+        //        {
+        //            var productEntity = _mapper.Map<WalletService.Domain.Entities.Product>(request);
+        //            await _productService.UpdateProduct(productEntity);
+
+        //            var productUpdateEntity = _mapper.Map<ProductModel>(productEntity);
+
+        //            ErrorModel errorModel = new();
+        //            ErrorMessageFormat.SuccessMessageHandler(ref errorModel);
+        //            productUpdateEntity.ErrorModel = errorModel;
+
+        //            return productUpdateEntity;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ProductModel productModel = new ProductModel();
+        //        ErrorModel errorModel = new();
+        //        ErrorMessageFormat.FailMessageHandler(ref errorModel);
+        //        productModel.ErrorModel = errorModel;
+        //        return productModel;
+        //    }
+        //}
     }
 }

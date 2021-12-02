@@ -1,4 +1,4 @@
-﻿namespace WalletService.API.Handler.RSA
+﻿namespace WalletService.API.Handler.RSAHandler
 {
     public interface IRSAHandler
     {
