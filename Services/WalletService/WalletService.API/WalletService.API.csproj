@@ -25,6 +25,7 @@
     <ProjectReference Include="..\..\..\Shared\AuditLib.Grpc\AuditLib.Grpc.csproj" />
     <ProjectReference Include="..\..\..\Shared\DTO\DTO.csproj" />
     <ProjectReference Include="..\..\..\Shared\Helper\Helper.csproj" />
+    <ProjectReference Include="..\..\..\WalletService.Infrastructure.Dapper\WalletService.Infrastructure.Dapper.csproj" />
     <ProjectReference Include="..\WalletService.Application\WalletService.Application.csproj" />
     <ProjectReference Include="..\WalletService.Infrastructure\WalletService.Infrastructure.csproj" />
   </ItemGroup>

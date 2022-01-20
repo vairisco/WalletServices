@@ -3,5 +3,6 @@
     public class ProductCreateRequest
     {
         public string Name { get; set; } = "";
+        public string RecaptchaToken { get; set; }
     }
 }

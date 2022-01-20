@@ -7,13 +7,18 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using WalletService.API.Extensions;
+using WalletService.API.Handler.ReCaptchaHandler;
 using WalletService.API.Handler.RSAHandler;
 using WalletService.API.RSAHandler;
+using WalletService.Application.Contracts.Infrastructure;
+using WalletService.Infrastructure.Dapper.Persistence;
 using WalletService.Infrastructure.Persistence;
+using WalletService.Infrastructure.Recaptcha;
 
 namespace WalletAPIService
 {
@@ -32,18 +37,27 @@ namespace WalletAPIService
         {
             services.AddScoped<IRSAHandler, RSAHandler>();
             services.AddSerilog();
-            services.AddDbContextPool<WalletContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Wallet_ConnectStringDb")));
-            
-            services.AddScoped<Func<WalletContext>>((provider) => () => provider.GetService<WalletContext>());
-            services.AddScoped<DbFactory>();
+
+            // config EF
+            //services.AddDbContextPool<WalletContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Wallet_ConnectStringDb")));
+
+            //services.AddScoped<Func<WalletContext>>((provider) => () => provider.GetService<WalletContext>());
+            //services.AddScoped<DbFactory>();
+
+            // config Dapper
+            services.AddSingleton<WalletDapperContext>();
+            services.AddScoped<DbSession>(_ => new DbSession(Configuration.GetConnectionString("Wallet_ConnectStringDb")));
 
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddHealthChecks();
+            services.AddHealthChecks()
+                    .AddCheck("Healthy", () => HealthCheckResult.Healthy("Wallet Service is Ok!"), tags: new[] { "wallet_service_healthy" })
+                    .AddCheck("UnHealthy", () => HealthCheckResult.Unhealthy("Wallet Service is unhealthy!"), tags: new[] { "wallet_service_unhealthy" })
+                    .AddCheck("Degraded", () => HealthCheckResult.Degraded("Wallet Service is degraded!"), tags: new[] { "wallet_service_degraded" });
 
             services.AddDIServices();
             services.AddServiceGrpcRegistration(Configuration);
-
+            services.AddReCaptchaRegistration();
 
             services.AddCors(opt =>
             {

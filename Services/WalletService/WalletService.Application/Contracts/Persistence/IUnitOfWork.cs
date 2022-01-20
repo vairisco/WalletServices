@@ -8,6 +8,8 @@ namespace WalletService.Application.Contracts.Persistence
 {
     public interface IUnitOfWork
     {
+        void BeginTransaction();
         Task<int> CommitAsync();
+        void Rollback();
     }
 }

@@ -2,17 +2,19 @@ using Audit.Core;
 using AuditLib.Grpc;
 using AutoMapper;
 using Grpc.Core;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json;
 using System.Threading.Tasks;
 using WalletService.API.Handler;
+using WalletService.API.Handler.ReCaptchaHandler;
 using WalletService.API.Handler.RSAHandler;
 using WalletService.API.Helper;
 using WalletService.API.ViewModels.Product;
+using WalletService.Application.Contracts.Infrastructure;
 using WalletService.Application.Features.Products.Interface;
+using WalletService.Application.Models.GoogleModel;
 
 namespace WalletAPIService
 {
@@ -21,8 +23,16 @@ namespace WalletAPIService
         private readonly IMapper _mapper;
         private readonly IProductBusinessService _productService;
         private readonly IRSAHandler _rsaHandler;
-        public ProductService(IRSAHandler rsaHandler, IProductBusinessService productService, IMapper mapper, AuditCore auditLog)
+        private readonly IReCaptchaHandler _reCaptchaHandler;
+        public ProductService(
+            IRSAHandler rsaHandler, 
+            IProductBusinessService productService, 
+            IMapper mapper, 
+            AuditCore auditLog,
+            IReCaptchaHandler reCaptchaHandler
+            )
         {
+            _reCaptchaHandler = reCaptchaHandler;
             _rsaHandler = rsaHandler;
             _mapper = mapper;
             _productService = productService;
@@ -31,6 +41,12 @@ namespace WalletAPIService
         public override async Task<ProductsModel> GetProducts(EmptyMessage emptyMessage, ServerCallContext context) {
             try
             {
+                //if (!(await _reCaptchaHandler.CheckReCaptcha(signUpModel.RecaptchaToken))) {
+                //    return new ProductsModel();
+                //};
+
+                //call Business layer
+
                 var products = await _productService.GetProducts();
                 var productsConvertModel = _mapper.Map<IEnumerable<ProductModel>>(products);
                 var replyModel = new ProductsModel();
@@ -47,8 +63,15 @@ namespace WalletAPIService
         {
             try
             {
+
                 var requestDecrypt = _rsaHandler.Decrypt(requestModel.Data);
                 var request = DeserializeHelper.DeserializeMethod<ProductCreateRequest>(requestDecrypt);
+
+                if (!(await _reCaptchaHandler.CheckReCaptcha(requestModel.RecaptchaToken)))
+                {
+                    return new ResultModel();
+                };
+
 
                 using (AuditScope.Create(_ => _
                 .EventType("Product:Create")

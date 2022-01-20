@@ -24,7 +24,7 @@ namespace WalletService.Infrastructure.Repositories
             _dbFactory = dbFactory;
         }
 
-        public async Task<IReadOnlyList<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await DbSet.ToListAsync();
         }

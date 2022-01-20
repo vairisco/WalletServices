@@ -25,6 +25,7 @@ namespace WalletService.Application.Features.Products
 
         public async Task<Product> CreateProduct(Product productEntity)
         {
+            _unitOfWork.BeginTransaction();
             await _productRepository.AddAsync(productEntity);
             var saved = await _unitOfWork.CommitAsync();
             return saved > 0 ? productEntity : null;
@@ -37,6 +38,7 @@ namespace WalletService.Application.Features.Products
 
         public async Task<bool> UpdateProduct(Product productEntity)
         {
+            _unitOfWork.BeginTransaction();
             await _productRepository.UpdateAsync(productEntity);
             var saved = await _unitOfWork.CommitAsync();
             return saved > 0;

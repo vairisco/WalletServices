@@ -27,7 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WalletService.API", "Servic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HealthCheckService", "HealthCheckService", "{5BD437CC-5EA4-41A2-BCB9-16A3DA5C0159}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheckService", "Services\HealthCheckService\HealthCheckService\HealthCheckService.csproj", "{63BD297A-6645-41B0-8EA5-28AAB1CA08B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCheckService", "Services\HealthCheckService\HealthCheckService\HealthCheckService.csproj", "{63BD297A-6645-41B0-8EA5-28AAB1CA08B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WalletService.Infrastructure.Dapper", "WalletService.Infrastructure.Dapper\WalletService.Infrastructure.Dapper.csproj", "{143A6040-9EBC-4015-987E-81AC0D1C0E20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthService", "AuthService", "{045AEAE5-CC48-4F73-B08E-3A64AC48EA05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "Services\AuthService\AuthService\AuthService.csproj", "{AE6D3EE3-BE5D-4A25-818F-91739FFF9E02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Infrastructure", "Services\AuthService\AuthServer.Infrastructure\AuthService.Infrastructure.csproj", "{95B309DE-3A1E-4BF7-8D37-3B103938058C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +79,18 @@ Global
 		{63BD297A-6645-41B0-8EA5-28AAB1CA08B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63BD297A-6645-41B0-8EA5-28AAB1CA08B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63BD297A-6645-41B0-8EA5-28AAB1CA08B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143A6040-9EBC-4015-987E-81AC0D1C0E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143A6040-9EBC-4015-987E-81AC0D1C0E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143A6040-9EBC-4015-987E-81AC0D1C0E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143A6040-9EBC-4015-987E-81AC0D1C0E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE6D3EE3-BE5D-4A25-818F-91739FFF9E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6D3EE3-BE5D-4A25-818F-91739FFF9E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6D3EE3-BE5D-4A25-818F-91739FFF9E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6D3EE3-BE5D-4A25-818F-91739FFF9E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B309DE-3A1E-4BF7-8D37-3B103938058C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B309DE-3A1E-4BF7-8D37-3B103938058C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B309DE-3A1E-4BF7-8D37-3B103938058C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B309DE-3A1E-4BF7-8D37-3B103938058C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +107,10 @@ Global
 		{49C0607F-A99E-41A7-A920-B0ED387D8A00} = {4EDCAFC6-DF79-4DE2-86E4-7C2362448B79}
 		{5BD437CC-5EA4-41A2-BCB9-16A3DA5C0159} = {4A4020A5-B994-45ED-80AC-066780B4E2FB}
 		{63BD297A-6645-41B0-8EA5-28AAB1CA08B0} = {5BD437CC-5EA4-41A2-BCB9-16A3DA5C0159}
+		{143A6040-9EBC-4015-987E-81AC0D1C0E20} = {4EDCAFC6-DF79-4DE2-86E4-7C2362448B79}
+		{045AEAE5-CC48-4F73-B08E-3A64AC48EA05} = {4A4020A5-B994-45ED-80AC-066780B4E2FB}
+		{AE6D3EE3-BE5D-4A25-818F-91739FFF9E02} = {045AEAE5-CC48-4F73-B08E-3A64AC48EA05}
+		{95B309DE-3A1E-4BF7-8D37-3B103938058C} = {045AEAE5-CC48-4F73-B08E-3A64AC48EA05}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCF315FF-CBEE-4198-8AF8-C7A220570B32}

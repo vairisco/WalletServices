@@ -12,9 +12,20 @@ namespace WalletService.Infrastructure.Repositories
         {
             _dbFactory = dbFactory;
         }
+
+        public void BeginTransaction()
+        {
+            return;
+        }
+
         public Task<int> CommitAsync()
         {
             return _dbFactory.DbContext.SaveChangesAsync();
+        }
+
+        public void Rollback()
+        {
+            return;
         }
     }
 }

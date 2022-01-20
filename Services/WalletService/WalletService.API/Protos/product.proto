@@ -21,13 +21,6 @@ service Product {
       body: "*"
     };
   }
-
-  rpc UpdateProduct (RequestModel) returns (ResultModel) {
-    option (google.api.http) = {
-      put: "/update",
-      body: "*"
-    };
-  }
 }
 
 message EmptyMessage {
@@ -52,9 +45,19 @@ message ResultModel {
 
 message RequestModel {
     string Data = 1;
+    string RecaptchaToken = 2;
 }
 
 message ErrorModel {
     int32 Error = 1;
     string Message = 2;
+}
+
+message SignUpModel {
+    string Email = 1;
+    string RecaptchaToken = 2;
+}
+
+message ResponseModelRecaptcha {
+    string Message = 1;
 }
