@@ -5,6 +5,7 @@ using AuthService.Permission;
 using AuthService.Repositories;
 using AuthService.Repositories.Interface;
 using AuthService.Repositories.Interfaces;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -42,8 +43,13 @@ namespace AuthService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers()
+                .AddFluentValidation(s =>
+                {
+                    s.RegisterValidatorsFromAssemblyContaining<Startup>();
+                    s.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
+                });
 
-            services.AddControllers();
             services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
             services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
             services.AddScoped<IModuleRepository, ModuleRepository>();
